@@ -1,3 +1,5 @@
+// search a number in array in particular range
+
 package dsa.array.search.linear;
 
 import java.util.Arrays;
