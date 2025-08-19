@@ -12,7 +12,7 @@
 // Step 2 : Smallest number of selected elements will be answer
 // Conclusion : Smallest number >= target number
 
-package dsa.array.search.binary;
+package dsa.array.search.binary.problems;
 
 public class CeilingOfNumber {
     public static void main(String[] args) {

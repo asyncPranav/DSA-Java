@@ -11,7 +11,7 @@
 // Step 2 : Greatest number of selected elements will be answer
 // Conclusion : Greatest number <= target number
 
-package dsa.array.search.binary;
+package dsa.array.search.binary.problems;
 
 public class FloorOfNumber {
     public static void main(String[] args) {
