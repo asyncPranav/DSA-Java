@@ -26,22 +26,22 @@ public class SearchNumberInArrayInRange {
         System.out.println("\narr : "+ Arrays.toString(arr));
 
         // input target element
-        System.out.print("Which element you wanna find : ");
+        System.out.print("Enter target, start, end : ");
         int target = sc.nextInt();
+        int start = sc.nextInt();
+        int end = sc.nextInt();
 
         // output
-        int res = search(arr, target);
+        int res = search(arr, target, start, end);
         if(res != -1) System.out.println("Element found at "+res);
         else System.out.println("Element not found");
     }
 
     // search in the array in range [2,5] : return index if item found
     // otherwise return -1
-    static int search(int[] arr, int target){
+    static int search(int[] arr, int target, int start, int end){
         if (arr.length == 0) return -1;
-        int start = 2;
-        int end = 5;
-        System.out.println("\nSearching in range [2,5]");
+        System.out.println("\nSearching in range ["+start+" "+end+"]");
         for (int i = start; i <= end; i++) {
             int element = arr[i];
             if (element == target){
