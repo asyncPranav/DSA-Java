@@ -1,4 +1,4 @@
-package dsa.array.search.binary;
+package dsa.array.search.binary.theory;
 
 public class OrderAgnosticBinarySearch {
     public static void main(String[] args) {
