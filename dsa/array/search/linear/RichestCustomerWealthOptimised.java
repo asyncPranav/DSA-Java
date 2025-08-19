@@ -11,6 +11,7 @@ public class RichestCustomerWealthOptimised {
 
         int ans = maxWealth(accounts);
         System.out.println(ans);
+        System.out.println(maxWealth2(accounts));
     }
 
     // find max wealth
@@ -22,6 +23,18 @@ public class RichestCustomerWealthOptimised {
                 wealth += money;
             }
             max = Math.max(max, wealth);
+        }
+        return max;
+    }
+
+    static int maxWealth2(int[][] accounts){
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < accounts.length; i++) {
+            int money = 0;
+            for (int j = 0; j < accounts[i].length; j++) {
+                money += accounts[i][j];
+            }
+            if (money > max) max = money;
         }
         return max;
     }
