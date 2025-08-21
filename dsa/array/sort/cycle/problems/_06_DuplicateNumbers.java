@@ -10,6 +10,7 @@ public class _06_DuplicateNumbers {
         int ans = findDuplicate(nums);
         System.out.println(ans);
     }
+    //done by me
     static int findDuplicate(int[] nums) {
         int i = 0;
         int correctIndex;
@@ -26,7 +27,7 @@ public class _06_DuplicateNumbers {
                 return nums[index];
             }
         }
-        return nums.length;
+        return Integer.MIN_VALUE;
     }
     static void swap(int[] arr, int firstIndex, int secondIndex) {
         int temp = arr[firstIndex];
