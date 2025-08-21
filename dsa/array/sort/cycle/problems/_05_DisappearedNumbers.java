@@ -10,7 +10,7 @@ public class _05_DisappearedNumbers {
         // int[] arr = {4,3,2,3};
         int[] arr = {4,3,2,7,8,2,3,1};
         List<Integer> ans = findDisappearedNumbers(arr);
-        System.out.println(Arrays.toString(ans));
+        System.out.println(ans);
     }
     // done by kunal
     static List<Integer> findDisappearedNumbers(int[] nums){
