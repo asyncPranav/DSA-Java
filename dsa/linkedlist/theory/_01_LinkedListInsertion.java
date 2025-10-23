@@ -37,7 +37,7 @@ class SingleLinkedList{
     // Insert in end
     public void insertEnd(int val){
         Node node = new Node(val);
-        if (head == null) {
+        if (tail == null) {
             insertBegin(val);
             return;
         }
@@ -47,7 +47,7 @@ class SingleLinkedList{
     }
 
     // Insert at position
-    public void inserAtPosition(int val, int pos){
+    public void insertAtPosition(int val, int pos){
         if (pos < 1 || pos > size+1) {
             System.out.println("Invalid position..!!");
             return;
@@ -173,11 +173,11 @@ public class _01_LinkedListInsertion {
         list.insertEnd(40);
         list.display();
 
-        list.inserAtPosition(60, 3);
+        list.insertAtPosition(60, 3);
         list.display();
-        list.inserAtPosition(50,1);
+        list.insertAtPosition(50,1);
         list.display();
-        list.inserAtPosition(70,7);
+        list.insertAtPosition(70,7);
         list.display();
 
         list.insertAfterValue(20, 80);
