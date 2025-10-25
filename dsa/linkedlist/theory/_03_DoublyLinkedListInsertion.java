@@ -115,8 +115,8 @@ class DoublyLL {
         Node node = new Node(value);
         node.next = temp.next;
         node.prev = temp;
+        temp.next.prev = node; // order matters : if it is after "temp.next = node" then it will point to itself
         temp.next = node;
-        temp.next.prev = node;
         size++;
     }
 
