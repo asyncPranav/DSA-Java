@@ -130,6 +130,22 @@ class DoublyLL {
         System.out.println("END");
         System.out.println("Size : " + size);
     }
+
+    // DisplayBackward list
+    public void displayBackward() {
+        if (tail == null) {
+            System.out.println("List is empty.\n");
+            return;
+        }
+
+        Node temp = tail;
+        while(temp != null) {
+            System.out.print(temp.data +" <-> ");
+            temp = temp.prev;
+        }
+        System.out.println("START");
+        System.out.println("Size : " + size);
+    }
 }
 
 public class _03_DoublyLinkedListInsertion {
@@ -166,5 +182,9 @@ public class _03_DoublyLinkedListInsertion {
         list.insertAfterValue(300,11);
         list.displayForward();
         list.insertAfterValue(300,1838);
+        System.out.println("\n");
+
+        list.displayForward();
+        list.displayBackward();
     }
 }
