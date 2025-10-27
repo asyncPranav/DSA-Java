@@ -1,0 +1,17 @@
+🟢 1. Simple Queue (Linear Queue)
+
+Definition:
+A Simple Queue (or Linear Queue) is the basic form of queue that works on the FIFO (First In, First Out) principle.
+That means — the first element inserted is the first one to be removed.
+
+Operations:
+    . Enqueue: Add element at the rear
+    . Dequeue: Remove element from the front
+
+Limitation:
+Once the queue is full and elements are removed, empty spaces at the front can’t be reused — causing wastage of space.
+
+
+Example:
+    Front → [10, 20, 30] ← Rear
+    After dequeue → [20, 30]
