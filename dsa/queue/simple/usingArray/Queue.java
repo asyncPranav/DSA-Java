@@ -1,5 +1,13 @@
 package dsa.queue.simple.usingArray;
 
+/*
+    Queue Using Array – Key Points
+        . Use front and rear pointers.
+        . front → points to the first element.
+        . rear → points to the last element inserted.
+        . Initially, both front = -1 and rear = -1.
+*/
+
 class SimpleQueue {
     private int[] arr;
     private int front;
