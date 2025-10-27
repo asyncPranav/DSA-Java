@@ -1,0 +1,95 @@
+🌀 CIRCULAR QUEUE – THEORY (Detailed Explanation)
+
+🔹 1. Introduction
+
+    A Circular Queue is a special type of queue where:
+        . The last position is connected back to the first position (forming a circle).
+        . It reuses the empty space created by dequeue operations.
+    It solves the “wasted space” problem of a simple (linear) queue.
+
+
+🔹 2. Real-life Analogy
+
+    Imagine a Ferris wheel 🎡:
+        . People get on at the entry point (enqueue).
+        . After one rotation, they get off at the same point (dequeue).
+        . The wheel keeps rotating — no new track needed!
+    That’s exactly how a circular queue works.
+
+
+🔹 3. Structure
+
+    . It is implemented using an array.
+    . Two pointers are maintained:
+        . front → points to the first element.
+        . rear → points to the last element.
+    . The queue wraps around when the end of the array is reached using modulo (%) operator.
+
+
+🔹 4. Key Conditions
+
+    Condition	                    |     Meaning
+    --------------------------------|---------------------------
+    front == -1 && rear == -1	    |    Queue is empty
+    (rear + 1) % capacity == front	|    Queue is full
+    front == rear (after dequeue)	|    Only one element left
+    When inserting first element	|    front = rear = 0
+
+
+🔹 5. Operations
+
+🟢 Enqueue (Insert)
+
+Steps:
+    - Check if full → (rear + 1) % capacity == front
+    - If empty → set front = 0
+    - Move rear = (rear + 1) % capacity
+    - Insert new element at arr[rear]
+
+✅ Time complexity: O(1)
+
+
+🔵 Dequeue (Delete)
+
+Steps:
+    - Check if empty → front == -1
+    - Store value at arr[front]
+    - If only one element → reset front = rear = -1
+    - Else move front = (front + 1) % capacity
+
+✅ Time complexity: O(1)
+
+
+🟠 Peek
+→ Return the element at arr[front]
+
+✅ Time complexity: O(1)
+
+
+🔴 Display
+→ Start from front and loop till rear using:
+
+for (int i = front; i != rear; i = (i + 1) % capacity)
+
+
+
+🔹 6. Advantages
+
+✅ Reuses freed space (no wasted memory)
+✅ Fixed size (array-based, simple to manage)
+✅ All operations in O(1) time
+
+
+
+🔹 7. Disadvantages
+
+❌ Fixed maximum capacity (unlike linked list)
+❌ Slightly more complex indexing (needs modulo arithmetic)
+
+
+
+🔹 8. Common Use Cases
+    - CPU Scheduling (Round Robin)
+    - Network Buffering
+    - Traffic lights systems
+    - Memory management
