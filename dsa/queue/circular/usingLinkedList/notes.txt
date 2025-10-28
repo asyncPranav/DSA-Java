@@ -1,0 +1,41 @@
+🧩 CIRCULAR QUEUE USING LINKED LIST (THEORY + CODE)
+
+
+🔹 Concept Recap
+
+    A Circular Queue using Linked List is a queue where
+    the last node points back to the first node, forming a circle.
+
+    It still follows the FIFO principle (First In, First Out).
+
+
+
+⚙️ Key Points
+Property          |                   	Description
+------------------|--------------------------------------------
+Front	          |   Points to the first node (for dequeue)
+Rear	          |   Points to the last node (for enqueue)
+Rear.next	      |   Points back to front (circular connection)
+No overflow	      |   Because linked list grows dynamically
+Empty condition	  |   When front == null
+One element	      |   When front == rear
+
+
+
+🧠 Algorithm
+
+1️⃣ Enqueue (Insert Element)
+    - Create a new node with given data.
+    - If the queue is empty → both front and rear point to this new node, and rear.next = front.
+    - Otherwise → link rear.next = newNode, then update rear = newNode, and make rear.next = front again.
+
+2️⃣ Dequeue (Remove Element)
+    - If queue is empty → print “Queue Underflow”.
+    - If there is only one element → set front = rear = null.
+    - Else → move front to front.next, and update rear.next = front.
+
+3️⃣ Peek
+    - Return front.data if queue isn’t empty.
+
+4️⃣ Display
+    - Start from front and traverse until you reach rear again (since it’s circular).
